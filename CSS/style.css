@@ -1,13 +1,4 @@
-.header, .main {
-
-    max-width: 640px;
-    width: 100%;
+.header-container, .main-content {
     text-align: center;
     padding: 0 6.25% 0 6.25%;
-}
-
-@media (min-width: 320px) and (max-width: 640px) {
-    .header-title-text {
-        color: red;
-    }
 }
