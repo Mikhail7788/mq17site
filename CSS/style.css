@@ -1,4 +1,6 @@
 .header-container, .main-content { 
+    min-width: 320px;
+    max-width: 640px;
     padding: 0 6.25% 0 6.25%;
     text-align: center;
 }
