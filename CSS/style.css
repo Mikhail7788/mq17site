@@ -1,4 +1,9 @@
-.header-container, .main-content {
-    text-align: center;
+.header-container, .main-content { 
     padding: 0 6.25% 0 6.25%;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 640px) {
+    background-image: url("img/football_767.jpg");
+    
 }
