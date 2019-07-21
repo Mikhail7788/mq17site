@@ -1,13 +1,108 @@
-.header-container, .main-content { 
-    min-width: 320px;
-    max-width: 640px;
-    padding: 0 6.25% 0 6.25%;
-    text-align: center;
-}
-
 @media (min-width: 320px) and (max-width: 640px) {
-    .header {
-            background-image: url("img/football_767.jpg");
+    
+    body {
+        margin: 0;
+        font-family: Open Sans, Arial, san-serif;
     }
     
+    .header {
+        background-image: url("../img/football_767.jpg");
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    
+    .header::after {
+        content: "";
+        background-color: #1b1c4f;
+        opacity: 0.92;
+        position: absolute;
+        
+        top: 0;
+        left: 0;
+        right:0;
+        bottom: 0;
+    }
+    
+    .header-container {
+        z-index: 1;
+        position: relative;
+    }
+    
+    .header-container, .main-content {
+    padding: 0 6.25% 0 6.25%;
+    text-align: center;
+    }
+    
+    .logo {
+        margin-top: 30px;
+        width: 130px;
+    }
+    
+    .header-title {
+        margin-top: 135px;
+        margin-bottom: 88px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: left;
+    }
+    
+    .header-title-text-one, .header-title-text-two {
+        display: inline-block;
+        font-size: 28px;
+    }
+    
+    .header-title-text-one {
+        line-height: 31.3px;
+    }
+    
+    .header-title-text-two {
+        margin-left: 44px;
+    }
+    
+    
+    .button-app, .button-google {
+        width: 280px;
+        border-radius: 20px;
+        background-color: #5e42b0;
+        border: none;
+    }
+       
+    .button-app {
+        margin-bottom: 15px;
+        background-image: url("../svg/apple_logo_black.svg");
+        background-repeat: no-repeat;
+        background-position: center left 77px;
+        background-size: 23px;
+    }
+    
+    .button-google {
+        margin-bottom: 84px;
+    } 
+    
+    .button-text-one, .button-text-two {
+        display: block;
+        padding: 0 84px 0 100px;
+        text-align: left;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 8px;
+        font-weight: normal;
+    }
+    
+    .button-text-one {
+        padding-top: 4px;
+        padding-bottom: 2px;
+    }
+     
+    .button-text-two {
+        padding-bottom: 4px;
+        font-weight: bold;
+    }
+    
+    /*.apple-icon {
+        fill: #ffffff;
+        width: 23px;
+        height: 23px;*/
+    }
 }
