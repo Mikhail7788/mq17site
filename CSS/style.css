@@ -312,17 +312,17 @@ body {
     z-index: 1;
 }
 
-/*.teamwork-header:first-child::before {
-    content: "01";
-}*/
-
 .teamwork-item:first-child .teamwork-header::before {
     content: "01";
 }
 
-/*.teamwork-header:last-child::before {
-    content: "07";
-}*/
+.teamwork-item:nth-child(2) .teamwork-header::before {
+    content: "02";
+}
+
+.teamwork-item:last-child .teamwork-header::before {
+    content: "03";
+}
 
 .teamwork-header::after {
     content: "";
