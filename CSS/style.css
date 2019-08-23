@@ -137,19 +137,9 @@ body {
 }
 
 .section-container {
-    width: 88%;
+    position: relative;
+    width: 87%;
     margin: 0 auto;
-}
-
-.section-container::before {
-    content: "";
-    background-image: url("../img/footballer_mobile.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: absolute;
-    z-index: 1;
-    width: 92%;
-    height: 440px;
 }
 
 .section-title {
@@ -161,37 +151,41 @@ body {
     text-align: left;   
 }
 
-/*.section-image {
+.image-athlets {
     position: absolute;
     z-index: 1;
-    display: inline-block;
-    text-align: center;
-
-}*/
+    right: calc(32% - 40px);
+    top: 70px;  
+}
 
 .athlets-list {
     padding-left: 0;
     list-style-type: none;
     margin: 0;
-    counter-reset: li;
 }
 
 .list-item {
     position: relative;
 }
 
-.list-item::before {
-    counter-increment: li;
-    content: '0' counter(li);
+.item-number {
     position: absolute;
     display: inline-block;
     left: 6.2%;
-    top: 10.5rem;
-    
+    top: 10.7rem;
     
     font-size: 1.5rem;
     font-weight: bold;
-    border-bottom: 0.4rem solid #5e42b0;
+    /*border-bottom: 0.4rem solid #5e42b0;*/
+}
+
+.item-number:nth-child(n+2) {
+    display: inline-block;
+    top: 16.2rem;
+}
+
+.item-number:last-child {
+    top: 28.2rem;
 }
 
 .li-container {
@@ -233,32 +227,23 @@ body {
     padding-bottom: 55px;
 }
 
-.list-item:nth-child(n+2)::before {
+/*.list-item:nth-child(n+2)::before {
     top: 8.2rem;
 }
 
 .list-item:last-child::before {
     border-bottom: 0.4rem solid #ffffff;
-}
+}*/
 
 .list-item:last-child .item-content {
     color: #ffffff;
 }
 
-.section-players {
-    width: 100%;
-}
-
-.section-players > .section-container::before {
-    content: "";
-    background-image: url("../img/basketballer_302.png");
-    
+.image-players {
     position: absolute;
     z-index: 1;
-    
-    width: 95%;
-    height: 413px;
-    right: 14px;
+    right: calc(18% - 60px);
+    top: 70px;
 }
 
 .section-players .list-item:last-child {
