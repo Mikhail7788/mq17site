@@ -1,17 +1,15 @@
 @font-face {
-  font-family: 'OpenSans';
-  src: url("../fonts/OpenSans-Regular.ttf");
-  src: url("../OpenSans-Regular.woff");
-  src: url("../OpenSans-Regular.woff2");
+  font-family: 'OpenSans'; 
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), 
+  url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSans';
-  src: url("../fonts/OpenSans-Bold.ttf");
-  src: url("../OpenSans-Bold.woff");
-  src: url("../OpenSans-Bold.woff2");
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"),
+  url("/fonts../OpenSans-Bold.woff2") format("woff2"), url("/fonts../OpenSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; 
 }
@@ -172,20 +170,32 @@ body {
     position: absolute;
     display: inline-block;
     left: 6.2%;
-    top: 10.7rem;
-    
+    top: 10.6rem;
+    letter-spacing: 1px;
     font-size: 1.5rem;
-    font-weight: bold;
-    /*border-bottom: 0.4rem solid #5e42b0;*/
+    font-weight: 900;
 }
 
-.item-number:nth-child(n+2) {
-    display: inline-block;
-    top: 16.2rem;
+.item-number::after {
+  content: '';
+  position: absolute;
+  top: 1.9rem;
+  height: 0.4rem;
+  width: 1.7rem;
+  background-color: #5e42b0;
+  border-radius: 25%;
 }
 
-.item-number:last-child {
-    top: 28.2rem;
+.section-players .list-item:last-child .item-number {
+    color: #5e42b0;
+}
+
+.list-item:nth-child(n+2) .item-number {
+    top: 8.3rem;
+}
+
+.list-item:last-child .item-number::after {
+    background-color: #ffffff;
 }
 
 .li-container {
@@ -227,14 +237,6 @@ body {
     padding-bottom: 55px;
 }
 
-/*.list-item:nth-child(n+2)::before {
-    top: 8.2rem;
-}
-
-.list-item:last-child::before {
-    border-bottom: 0.4rem solid #ffffff;
-}*/
-
 .list-item:last-child .item-content {
     color: #ffffff;
 }
@@ -259,12 +261,8 @@ body {
     padding-bottom: 0;
 }
 
-.teamwork-item {
-    width: 100%;
-    background-color: #ffffff;
-}
-
 .teamwork-container {
+    position: relative;
     width: 88%;
     padding-bottom: 61px;
     margin: 0 auto;
@@ -274,50 +272,48 @@ body {
     width: 100%;
 }
 
+/*.teamwork-die {
+    position: absolute;
+    display: inline-block;
+    background-color: #5e42b0;
+    top: -60px;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}*/ 
+
+.teamwork-number {
+    position: absolute;
+    top: -82px;
+    left: 0px;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2.6rem solid #5e42b0;
+    background-color: #5e42b0;
+}
+
+.teamwork-number::after {
+  content: '';
+  position: absolute;
+  top: 1.9rem;
+  height: 0.43rem;
+  width: 1.7rem;
+  background-color: #8f7bc8;
+  left: 47%;
+  transform: translateX(-50%);
+  border-radius: 25%;
+}
+
 .teamwork-header {
     margin-top: 21px;
     margin-bottom: 0;
-    position: relative;
     font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #e7e7e7; 
 }
-
-.teamwork-header::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    top: -58px;
-    left: 27px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #ffffff;
-    border-bottom: 0.4rem solid #8f7bc8;
-    z-index: 1;
-}
-
-.teamwork-item:first-child .teamwork-header::before {
-    content: "01";
-}
-
-.teamwork-item:nth-child(2) .teamwork-header::before {
-    content: "02";
-}
-
-.teamwork-item:last-child .teamwork-header::before {
-    content: "03";
-}
-
-.teamwork-header::after {
-    content: "";
-    position: absolute;
-    background-color: #5e42b0;
-    top: -82px;
-    left: 1px;
-    width: 70px;
-    height: 70px;
-} 
 
 .teamwork-content {
     margin-top: 13px;
@@ -379,6 +375,7 @@ body {
 
 .footer-title {
     margin-top: 5.3rem;
+    margin-bottom: 0;
     font-size: 3.2rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -389,6 +386,7 @@ body {
     color: #9b8ec1;
     text-transform: uppercase;
     font-size: 1.4rem;
+    margin-top: 0;
 }
 
 .top-link {
