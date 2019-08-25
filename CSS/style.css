@@ -146,14 +146,21 @@ body {
     font-size: 50px;
     margin-bottom: 230px;
     margin-top: 8px;
-    text-align: left;   
+    text-align: left;
 }
 
-.image-athlets {
+/*.image-athlets {
     position: absolute;
     z-index: 1;
     right: calc(32% - 40px);
     top: 70px;  
+}*/
+
+.image-athlets {
+    margin: auto;
+    position: absolute;
+    top: 36rem; left: 0; bottom: 0; right: 0;
+    z-index: 1;
 }
 
 .athlets-list {
@@ -242,10 +249,10 @@ body {
 }
 
 .image-players {
+    margin: auto;
     position: absolute;
+    top: 36rem; left: -1.2rem; bottom: 0; right: 0;
     z-index: 1;
-    right: calc(18% - 60px);
-    top: 70px;
 }
 
 .section-players .list-item:last-child {
