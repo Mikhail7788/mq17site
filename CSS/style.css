@@ -191,6 +191,10 @@ body {
     width: 100%;
 }
 
+.section-players {
+    width: 100%;
+}
+
 .section-container {
     position: relative;
     width: 87%;
@@ -397,19 +401,23 @@ body {
     z-index: 1;
 }
 
-@media (min-width: 641px) and (max-width: 822px) {
+@media (min-width: 641px) and (max-width: 960px) {
+    
     .picture-players {
-        top: -3.5rem;
-        left: calc(34vw + 7%);
+        margin: auto;
+        position: absolute;
+        top: -4.5rem;
+        text-align: right;
+        right: -7%;
     }
 }
 
-@media (min-width: 823px) and (max-width: 960px) {
+/*@media (min-width: 823px) and (max-width: 960px) {
     .picture-players {
         top: -3.5rem;
-        left: calc(38.5vw + 10.8%);
+        left: calc(38.5vw + 9%);
     }
-}
+}*/
 
 .section-players .list-item:last-child {
     background-color: #090c35;
