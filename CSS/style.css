@@ -407,7 +407,7 @@ body {
 @media (min-width: 823px) and (max-width: 960px) {
     .picture-players {
         top: -3.5rem;
-        left: calc(38.5vw + 11%);
+        left: calc(38.5vw + 10.8%);
     }
 }
 
