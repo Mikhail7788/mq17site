@@ -220,10 +220,22 @@ body {
 }
 
 .picture-athlets {
-    margin: auto;
-    position: absolute;
-    z-index: 1;
-    top: 7rem; left: calc(34% + 10px); bottom: 0; right: 0;
+        margin: auto;
+        position: absolute;
+        z-index: 1;
+        top: 7rem; left: calc(20% + 10px); bottom: 0; right: 0;
+    }
+
+@media (min-width: 320px) and (max-width: 419px) {
+    .picture-athlets {
+        left: calc(26% + 10px);
+    }
+}
+
+@media (min-width: 420px) and (max-width: 640px) {
+    .picture-athlets {
+        left: calc(34% + 10px);
+    }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
@@ -397,27 +409,32 @@ body {
 .picture-players {
     margin: auto;
     position: absolute;
-    top: 8rem; left: calc(18% + 10px); bottom: 0; right: 0;
+    top: 8rem; left: 0; bottom: 0; right: 0;
     z-index: 1;
+    }
+
+@media (min-width: 370px) and (max-width: 459px) {
+    
+    .picture-players {
+        left: calc(10% + 10px);
+    }
+}
+
+@media (min-width: 460px) and (max-width: 640px) {
+    
+    .picture-players {
+    left: calc(18% + 10px);
+    }
 }
 
 @media (min-width: 641px) and (max-width: 960px) {
     
     .picture-players {
-        margin: auto;
-        position: absolute;
         top: -4.5rem;
         text-align: right;
-        right: -7%;
+        right: -7.39%;
     }
 }
-
-/*@media (min-width: 823px) and (max-width: 960px) {
-    .picture-players {
-        top: -3.5rem;
-        left: calc(38.5vw + 9%);
-    }
-}*/
 
 .section-players .list-item:last-child {
     background-color: #090c35;
