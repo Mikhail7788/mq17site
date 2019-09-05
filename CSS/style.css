@@ -355,6 +355,7 @@ body {
   top: 1.9rem;
   height: 0.4rem;
   width: 1.7rem;
+  transform: translateX(-110%);
   background-color: #5e42b0;
   border-radius: 25%;
 }
